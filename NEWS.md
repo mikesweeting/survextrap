@@ -1,3 +1,13 @@
+# Version 0.8.15 (2024/06/29)
+
+* Random walk prior for the coefficients changed to a first-order weighted model, following [Phillippo et al.](https://arxiv.org/abs/2401.12640), so that the expected smoothness accounts for the knot spacing.
+
+
+# Version 0.8.14 (2024/06/13)
+
+* Added discount rate argument `disc_rate` to `mean` and `rmst()` functions (PR #12)
+
+
 # Version 0.8.13 (2024/03/05)
 
 * Bug fix for models with external data and either nonproportional hazards or covariates on cure probability. 
@@ -24,7 +34,7 @@
 
 * Cleaned and simplified internal code for model outputs (`rmst`, `survival` etc.). 
 
-* `rmst` now outputs a tibble, and confidence limits in the default output are renamed to `lower` and `upper` for consistency with `survival` and `hazard`.
+* `rmst` now outputs a tibble, and credible limits in the default output are renamed to `lower` and `upper` for consistency with `survival` and `hazard`.
 
 * Arrays now allowed for `coef` argument in `dsurvspline` and related functions.
 
